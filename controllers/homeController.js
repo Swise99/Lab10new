@@ -11,3 +11,12 @@ exports.getAllBooks=(req, res , next) => {
         next();
     });
 };
+
+exports.respondWithBookInfo=(req, res, next) => {
+    let bookNum = req.params.bookNum;
+    bookObj.findOne({ numId: bookNum }, (error, book) => {
+        if (error) next(error);
+        req.data=book;
+        next();
+    });
+}

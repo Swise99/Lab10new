@@ -41,7 +41,14 @@ app.get(
         res.render("homePage", { "books": req.data });
     }
 );
-// app.get("/books/:bookNum")
+app.get(
+    "/books/:bookNum",
+    homeController.respondWithBookInfo,
+    (req, res, next) => {
+        console.log(req.data),
+        res.render("books", { "book": req.data });
+    }
+);
 
 app.listen(app.get("port"), () => {
     console.log(`Server running at http://localhost:${app.get("port")}`);
