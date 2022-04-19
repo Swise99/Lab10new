@@ -1,0 +1,12 @@
+#container { 
+    background: gray; 
+    font-family: 'Courier New', Courier, monospace;
+}
+#titleContainer { 
+    background: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#title {
+    color: green;
+    background: whitesmoke;
+}
